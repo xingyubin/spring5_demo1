@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="user2" class="com.atguigu.spring5.User" scope="prototype">
+    </bean>
+
+    <bean id="dog" class="com.atguigu.spring5.Dog" init-method="initMethod" destroy-method="destroyMethod" autowire="byName">
+        <property name="myname" value="球球"></property>
+    </bean>
+    <bean id="user" class="com.atguigu.spring5.User"></bean>
+</beans>
